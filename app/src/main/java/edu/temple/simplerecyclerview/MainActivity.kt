@@ -2,6 +2,7 @@ package edu.temple.simplerecyclerview
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 class MainActivity : AppCompatActivity() {
@@ -14,7 +15,10 @@ class MainActivity : AppCompatActivity() {
 
         //Step 2: Provide a LayoutManager
 
+        recyclerView.layoutManager = GridLayoutManager(this, 3)
+
 
         //Step 4: Provide a RecyclerView.Adapter
+        recyclerView.adapter = NumberDisplayAdapter()
     }
 }
